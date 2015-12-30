@@ -26,6 +26,7 @@ def construct_jwt_auth(response):
 
 
 def get_result_size():
+    headers = {"Range": "0-0"}
     r = requests.get(urls.data, auth=auth)
     size = int(r.headers['Content-Range'].split('/')[1])
     return size

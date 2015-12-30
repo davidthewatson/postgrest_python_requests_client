@@ -8,8 +8,6 @@ except ImportError:
     print('Config.py not found. Copy config.in to config.py and edit to suit.')
     exit()
 
-PAGE_SIZE = 20
-
 
 def login(email, password):
     r = requests.post(urls.login,
@@ -32,8 +30,8 @@ def get_result_size(auth):
     return size
 
 
-def get_range(beg, end, auth):
-    end = beg + PAGE_SIZE if beg + PAGE_SIZE < end else end
+def get_range(beg, end, page_size, auth):
+    end = beg + page_size if beg + page_size < end else end
     this_range = '{0}-{1}'.format(beg, end)
     headers = {"Range": "{}".format(this_range)}
     r = requests.get(urls.data, auth=auth,
@@ -44,7 +42,7 @@ def get_range(beg, end, auth):
 if __name__ == '__main__':
     auth = construct_jwt_auth(login(credentials.email, credentials.password))
     size = get_result_size(auth)
-
-    for i in range(0, size, PAGE_SIZE):
-        this_range = get_range(i, i+PAGE_SIZE-1, auth)
+    page_size = 20
+    for i in range(0, size, page_size):
+        this_range = get_range(i, i+page_size-1, page_size, auth)
         print(str(this_range) + '\n')

@@ -17,6 +17,8 @@ See http://postgrest.com/ for more information.
 ## Installation and configuration
 
 0. Clone this repository
+
+        git clone https://github.com/davidthewatson/postgrest_python_requests_client.git
 0. Install requirements
 
         pip install -r requirements.txt

@@ -25,7 +25,7 @@ def construct_jwt_auth(response):
     return auth
 
 
-def get_result_size():
+def get_result_size(auth):
     headers = {"Range": "0-0"}
     r = requests.get(urls.data, auth=auth)
     size = int(r.headers['Content-Range'].split('/')[1])
@@ -42,9 +42,8 @@ def get_range(beg, end, auth):
     return r.json()
 
 if __name__ == '__main__':
-    r = login(credentials.email, credentials.password)
-    auth = construct_jwt_auth(r)
-    size = get_result_size()
+    auth = construct_jwt_auth(login(credentials.email, credentials.password))
+    size = get_result_size(auth)
 
     for i in range(0, size, PAGE_SIZE):
         this_range = get_range(i, i+PAGE_SIZE-1, auth)

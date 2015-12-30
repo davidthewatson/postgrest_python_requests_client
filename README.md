@@ -26,5 +26,4 @@ See http://postgrest.com/ for more information.
 0. Edit credentials and urls in config.in to suit
 0. Save config.py
 0. Run
-
     python client.py

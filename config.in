@@ -1,0 +1,9 @@
+from bunch import Bunch
+
+credentials = Bunch()
+credentials.email = 'you@yours.com'
+credentials.password = 'password'
+
+urls = Bunch()
+urls.login = 'http://localhost:3000/rpc/login'
+urls.data = 'http://localhost:3000/posts'

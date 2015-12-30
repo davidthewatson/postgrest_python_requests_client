@@ -1,0 +1,4 @@
+bunch==1.0.1
+PyJWT==1.4.0
+requests==2.9.1
+requests-jwt==0.4

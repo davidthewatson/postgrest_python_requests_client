@@ -19,10 +19,10 @@ See http://postgrest.com/ for more information.
 0. Clone this repository
 0. Install requirements
 
-    pip install -r requirements.txt
+        pip install -r requirements.txt
 0. Copy config.in to config.py
 
-    cp config.in config.py
+        cp config.in config.py
 0. Edit credentials and urls in config.in to suit
 0. Save config.py
 0. Run

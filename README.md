@@ -16,8 +16,6 @@ See http://postgrest.com/ for more information.
 
 ## Installation and configuration
 
-This example uses python 3.5. You may have to edit the source to accommodate python versions < 3.5.
-
 0. Clone this repository
 
         git clone https://github.com/davidthewatson/postgrest_python_requests_client.git
@@ -36,3 +34,7 @@ This example uses python 3.5. You may have to edit the source to accommodate pyt
 0. Run
 
         python client.py
+
+The example above uses python 3.5. You may have to edit the source to accommodate python versions < 3.5. For instance:
+
+    from __future__ import print_function

@@ -38,3 +38,5 @@ See http://postgrest.com/ for more information.
 The example above uses python 3.5. You may have to edit the source to accommodate python versions < 3.5. For instance:
 
     from __future__ import print_function
+
+<a href="http://davidwatson.org/">davidwatson.org</a>

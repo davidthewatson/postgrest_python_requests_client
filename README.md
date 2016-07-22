@@ -39,4 +39,4 @@ The example above uses python 3.5. You may have to edit the source to accommodat
 
     from __future__ import print_function
 
-<a href="http://davidwatson.org/">davidwatson.org</a>
+<a href="http://davidwatson.org/">david watson</a>
